@@ -1,10 +1,29 @@
 # TokoKu - Aplikasi Manajemen Toko Modern
 
-![Tangkapan Layar Dashboard TokoKu](https://i.imgur.com/G5fB4yV.png)
+![Macbook-Air-tokoku-rho vercel app](https://github.com/user-attachments/assets/f471c85b-1e04-4da2-af72-dc1a60b333e4)
 
 **TokoKu** adalah aplikasi web manajemen toko yang lengkap dan modern, dibangun untuk membantu pemilik usaha mengelola operasional toko mereka dengan efisien. Aplikasi ini menyediakan fitur-fitur penting mulai dari manajemen data, otentikasi pengguna dengan hak akses, hingga laporan analitik penjualan.
 
 **[Lihat Live Demo](https://tokoku-rho.vercel.app/)** 
+
+---
+
+## 🗄️ Skema Database
+
+Berikut adalah diagram relasi untuk struktur database yang digunakan dalam aplikasi ini di Supabase.
+![supabase-schema](https://github.com/user-attachments/assets/7e01470d-07aa-4452-8f93-f10771f3953c)
+
+---
+
+## 🗄️ Struktur Database
+
+Aplikasi ini menggunakan beberapa tabel utama di Supabase untuk mengelola data:
+
+-   **`users`**: Menyimpan informasi tambahan pengguna seperti `role` ('admin' atau 'pengguna'). Terhubung dengan tabel `auth.users` bawaan Supabase.
+-   **`items`**: Menyimpan semua data barang, termasuk nama, kategori, harga, stok, dan relasi ke `suppliers`.
+-   **`suppliers`**: Menyimpan data master untuk semua supplier.
+-   **`stores`**: Menyimpan data master untuk semua cabang toko.
+-   **`sales`**: Mencatat setiap transaksi penjualan yang terjadi, termasuk relasi ke `items` dan `stores`.
 
 ---
 
@@ -56,60 +75,7 @@ Anda bisa mencoba aplikasi menggunakan akun di bawah ini untuk melihat perbedaan
 
 ---
 
-## ⚙️ Panduan Setup & Instalasi Lokal
-
-Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berikut:
-
-1.  **Clone Repositori**
-    ```bash
-    git clone [https://github.com/andi-nugroho/tokoku-app.git](https://github.com/andi-nugroho/tokoku-app.git)
-    cd tokoku-app
-    ```
-
-2.  **Install Dependensi**
-    ```bash
-    npm install
-    ```
-
-3.  **Setup Database Supabase**
-    -   Buat proyek baru di [Supabase](https://supabase.io/).
-    -   Masuk ke **SQL Editor** dan jalankan seluruh skrip dari file `schema.sql` untuk membuat semua tabel dan kebijakan keamanan.
-
-4.  **Setup Environment Variables**
-    -   Buat file bernama `.env.local` di direktori utama proyek.
-    -   Dapatkan **URL** dan **Anon Key** dari dashboard Supabase Anda (Settings > API) dan masukkan ke dalam file.
-    ```env
-    REACT_APP_SUPABASE_URL=URL_SUPABASE_ANDA
-    REACT_APP_SUPABASE_ANON_KEY=ANON_KEY_SUPABASE_ANDA
-    ```
-
-5.  **Jalankan Aplikasi**
-    ```bash
-    npm start
-    ```
-    Aplikasi akan berjalan di `http://localhost:3000`.
-
----
-
-## 📂 Struktur Proyek
-
-/src
-|-- /components        # Komponen UI kecil yang dapat digunakan kembali (mis: Modal)
-|-- /layouts           # Komponen tata letak utama (Sidebar, MainLayout)
-|-- /lib               # Koneksi dan helper pihak ketiga (mis: supabaseClient)
-|-- /pages             # Komponen yang merepresentasikan satu halaman penuh
-|-- App.jsx            # Komponen utama yang mengatur routing & sesi
-|-- index.js           # Titik masuk utama aplikasi React
-
----
-
 ## 🤝 Kontribusi
-
-Kontribusi, isu, dan permintaan fitur sangat diterima! Jangan ragu untuk membuat isu baru atau pull request.
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT.
 
 Kontribusi, isu, dan permintaan fitur sangat diterima! Jangan ragu untuk membuat isu baru atau pull request.
 
