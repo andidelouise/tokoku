@@ -80,6 +80,3 @@ Anda bisa mencoba aplikasi menggunakan akun di bawah ini untuk melihat perbedaan
 
 Kontribusi, isu, dan permintaan fitur sangat diterima! Jangan ragu untuk membuat isu baru atau pull request.
 
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT.
