@@ -5,7 +5,7 @@
 **TokoKu** adalah aplikasi web manajemen toko yang lengkap dan modern, dibangun untuk membantu pemilik usaha mengelola operasional toko mereka dengan efisien. Aplikasi ini menyediakan fitur-fitur penting mulai dari manajemen data, otentikasi pengguna dengan hak akses, hingga laporan analitik penjualan.
 
 
-**[https://tokoku-rho.vercel.app/](https://tokoku-rho.vercel.app/)** 
+**[https://tokoku-rho.vercel.app/] (https://tokoku-rho.vercel.app/)** 
 
 ---
 
